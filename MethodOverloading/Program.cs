@@ -31,7 +31,17 @@
         }
         static void Main(string[] args)
         {
-            Console.WriteLine(Add(1, 1, isCurrency: false));
+           // Called the Add method for integers
+           int intResult = Add(1, 2); // I called the first overloaded method
+           Console.WriteLine($"Add(int, int): {intResult}");
+           
+           // Called the Add method for decimals
+           decimal decimalResult = Add(1.5m, 2.5m);
+           Console.WriteLine($"Add(decimal, decimal): {decimalResult}");
+           
+           // Called the Add method with three parameters
+           string currencyResult = Add(1, 2, isCurrency: true);
+           Console.WriteLine($"Add(int, int, bool): {currencyResult}");
         }
     }
 }
